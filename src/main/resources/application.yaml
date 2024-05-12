@@ -26,12 +26,12 @@ spring:
         # https://stackoverflow.com/questions/21257819/what-is-the-difference-between-hibernate-jdbc-fetch-size-and-hibernate-jdbc-batc
         jdbc.batch_size: 20
   datasource:
-    url: jdbc:postgresql://localhost:5432/jira
+    url: jdbc:postgresql://localhost:5444/jira
     username: jira
     password: JiraRush
 
   liquibase:
-    changeLog: "classpath:db/changelog.sql"
+    changeLog: "classpath:db/changelog/changelog.sql"
 
   # Jackson Fields Serialization
   jackson:
@@ -118,6 +118,8 @@ spring:
 
   mvc.throw-exception-if-no-handler-found: true
   web.resources.add-mappings: false
+  profiles:
+    active: prod
 
 logging:
   level:
@@ -135,3 +137,4 @@ server:
       enabled: true # Enable http encoding support
       force: true
 springdoc.swagger-ui.path: /doc
+

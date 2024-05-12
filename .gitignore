@@ -7,3 +7,6 @@ attachments
 *.patch
 
 
+### Gradle ###
+.gradle
+/build/
