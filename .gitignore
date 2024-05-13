@@ -10,3 +10,4 @@ attachments
 ### Gradle ###
 .gradle
 /build/
+/src/main/resources/application-sensitive.properties
