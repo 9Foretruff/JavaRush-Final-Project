@@ -14,7 +14,7 @@ Start with easy tasks and then move on to others. Try to complete as many tasks 
     *(Values of these properties should be read at server startup from machine environment variables. Easy task)* ✔
 4. **Refactor Tests to Use In-Memory Database (H2) instead of PostgreSQL**:
   - Define 2 beans, and the selection of which one to use should be determined by the active Spring profile.
-    *(H2 does not support all the features of PostgreSQL, so you'll need to simplify test data scripts a bit.)*
+    *(H2 does not support all the features of PostgreSQL, so you'll need to simplify test data scripts a bit.)* ✔
 5. **Write Tests for all Public Methods of the ProfileRestController Controller**:
   - Although there are only 2 methods, there should be more test methods because you need to check both success and failure paths.
 6. **Refactor the com.javarush.jira.bugtracking.attachment.FileUtil#upload Method**:
