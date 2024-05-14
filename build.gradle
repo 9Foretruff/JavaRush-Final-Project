@@ -1,0 +1,52 @@
+plugins {
+    id 'org.springframework.boot' version '3.0.2'
+    id 'io.spring.dependency-management' version '1.1.0'
+    id "io.freefair.lombok" version "8.6"
+    id 'jacoco'
+    id 'java'
+}
+
+group = 'com.javarush'
+version = '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+sourceCompatibility = 19
+targetCompatibility = 19
+
+apply from: 'version.gradle'
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+    implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
+    implementation 'org.springframework.boot:spring-boot-starter-mail'
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    implementation 'org.springframework.boot:spring-boot-starter-cache'
+    implementation "org.springdoc:springdoc-openapi-starter-webmvc-ui:${versions.springdoc}"
+    implementation 'com.fasterxml.jackson.datatype:jackson-datatype-hibernate5-jakarta'
+    implementation 'com.github.ben-manes.caffeine:caffeine'
+
+    runtimeOnly 'org.postgresql:postgresql'
+
+    implementation "org.mapstruct:mapstruct:${versions.mapstruct}"
+    annotationProcessor "org.mapstruct:mapstruct-processor:${versions.mapstruct}"
+
+    implementation 'org.projectlombok:lombok-mapstruct-binding:0.2.0'
+    implementation 'org.jsoup:jsoup:1.15.3'
+    implementation 'org.liquibase:liquibase-core'
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.springframework.security:spring-security-test'
+    testImplementation"org.testcontainers:postgresql:${versions.testcontainers}"
+    testImplementation "org.testcontainers:junit-jupiter:${versions.testcontainers}"
+}
+
+test {
+    useJUnitPlatform()
+    finalizedBy jacocoTestReport
+}
