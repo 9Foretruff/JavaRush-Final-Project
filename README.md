@@ -26,10 +26,10 @@ I changed tests to use Testcontainers
 Why this approach was chosen:
 - Using an in-memory database with Testcontainers is a preferred approach as it provides faster test execution and eliminates the dependency on a real PostgreSQL database in the testing environment. Additionally, Testcontainers ensures test isolation and simplifies test configuration.
 - Furthermore, this approach is recommended within the developer community. More details about the advantages of Testcontainers and the disadvantages of in-memory databases such as H2 can be found in the following sources:
-    - [![1](https://phauer.com/blog/2017/0821-dont-use-in-memory-databases-tests-h2/h2-vs-real-database-eo.svg)](https://phauer.com/2017/dont-use-in-memory-databases-tests-h2/)
     - https://phauer.com/2017/dont-use-in-memory-databases-tests-h2/
-    - [![2](https://i.ytimg.com/vi/27t5I-9VaPQ/maxresdefault.jpg)](https://youtu.be/27t5I-9VaPQ?si=hci_H1BlvJ4L6k3F)
+    - [![1](https://phauer.com/blog/2017/0821-dont-use-in-memory-databases-tests-h2/h2-vs-real-database-eo.svg)](https://phauer.com/2017/dont-use-in-memory-databases-tests-h2/)
     - https://youtu.be/27t5I-9VaPQ?si=hci_H1BlvJ4L6k3F
+    - [![2](https://i.ytimg.com/vi/27t5I-9VaPQ/maxresdefault.jpg)](https://youtu.be/27t5I-9VaPQ?si=hci_H1BlvJ4L6k3F)
     - ![Imgur](https://i.imgur.com/9CPseP8.png)
 
 5. **Write Tests for all Public Methods of the ProfileRestController Controller**:
@@ -39,7 +39,9 @@ Why this approach was chosen:
 
 6. **Refactor the com.javarush.jira.bugtracking.attachment.FileUtil#upload Method**:
 
-- Modify it to use a modern approach for working with the file system. *(Easy task)*
+- Modify it to use a modern approach for working with the file system. *(Easy task)* ✔
+
+![Imgur](https://i.imgur.com/UfoDDmu.png)
 
 7. **Add New Functionality: Task Tagging**:
 
